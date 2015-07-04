@@ -19,8 +19,13 @@
       <![endif]-->
   </head>
   <body>
-  	<div class="container">
-  		
+  	<!-- defined main module app using directive ng-app -->
+  	<div class="container" ng-app="app">
+  		<!-- import html file -->
+  		<header ng-include="'templates/nav.html'"></header>
+  		<!-- defined a view -->
+  		<div ui-view></div>
+  		<footer ng-include="'templates/footer.html'"></footer>
   	
   	</div>
 
