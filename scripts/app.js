@@ -10,12 +10,15 @@ angular
 			// http://localhost:8000/#/
 			.state('home', {
 				url: '/',
-				templateUrl: 'templates/home.html'
+				templateUrl: 'templates/home.html',
+				//define a controller
+				controller: 'homeCtrl'
 			})
 			//http://localhost:8000/#/about
 			.state('about', {
 				url: '/about',
-				templateUrl: 'templates/about.html'
+				templateUrl: 'templates/about.html',
+				controller: 'aboutCtrl'
 			})
 			//http://localhost:8000/#/contact 
 			.state('contact', {
