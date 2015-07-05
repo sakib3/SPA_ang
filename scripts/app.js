@@ -17,7 +17,7 @@ angular
 				url: '/about',
 				templateUrl: 'templates/about.html'
 			})
-			//http://localhost:8000/#/contact
+			//http://localhost:8000/#/contact 
 			.state('contact', {
 				url: '/contact',
 				templateUrl: 'templates/contact.html'
