@@ -1,9 +1,10 @@
  angular
  .module('app')
  // $scope is variable that can be accesable in the template
- .controller('homeCtrl', ['$scope', function($scope){
+ .controller('homeCtrl', ['$scope', 'friends', function($scope, friends){
  	$scope.title ="Home";
  	$scope.items = ['home', 'about', 'contact'];
  	$scope.selectedValue =$scope.items[0];
+ 	$scope.friends = friends;
  }]);
  

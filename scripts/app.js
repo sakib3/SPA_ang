@@ -12,7 +12,16 @@ angular
 				url: '/',
 				templateUrl: 'templates/home.html',
 				//define a controller
-				controller: 'homeCtrl'
+				controller: 'homeCtrl',
+				//fetch data
+				resolve: {
+					friends: ['$http', function($http){
+						return $http.get('/api/friends.json').then(function(response){
+							//parsing data
+							return response.data;
+						});
+					}]
+				}
 			})
 			//http://localhost:8000/#/about
 			.state('about', {
