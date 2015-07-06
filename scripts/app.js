@@ -15,11 +15,10 @@ angular
 				controller: 'homeCtrl',
 				//fetch data
 				resolve: {
-					friends: ['$http', function($http){
-						return $http.get('/api/friends.json').then(function(response){
-							//parsing data
-							return response.data;
-						});
+					friends: ['Friends', function(Friends){
+						
+						return Friends.get();
+						
 					}]
 				}
 			})
